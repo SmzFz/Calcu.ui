@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calcu.Calculadora">
+
+    <Grid
+        ColumnDefinitions="*,*,*,*"
+        RowDefinitions="160,*,*,*,*,*"
+        ColumnSpacing="5"
+        RowSpacing="5"
+        
+          BackgroundColor="{AppThemeBinding Light='#e3e3e3', Dark='#32383d'}"
+        >
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="{AppThemeBinding
+                        Light='#c8cde2', Dark='#282931'}"/>
+                    <Setter Property="FontSize" Value="30" />
+                    <Setter Property="TextColor" Value="{AppThemeBinding Light='Black', Dark='White'}"/>
+                    <Setter Property="MaximumHeightRequest" Value="90" />
+                    <Setter Property="MaximumWidthRequest" Value="90" />
+                    <Setter Property="CornerRadius" Value="100" />
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
+
+        <Border
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="4"
+            StrokeShape="RoundRectangle 0,0,20,20"
+            StrokeThickness="0"
+        
+            >
+            <Grid
+                ColumnDefinitions="*"
+                RowDefinitions="40,*"
+                Padding="0"
+                BackgroundColor="{AppThemeBinding Light='#c8cde2', Dark='#32383d'}">
+
+                <Label 
+                x:Name="lblHistorico"
+                Grid.Row="0"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="End"
+                FontSize="20"
+                Margin="0,0,15,0"
+                Text="" 
+                />
+
+
+
+                <Label 
+                x:Name="lblResultado"
+                Grid.Row="1"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="End"
+                FontSize="50"
+                 Margin="0,0,15,0"
+                Text="0" 
+                   
+                   />
+            </Grid>
+
+        </Border>
+        <Button  x:Name="btnAC" Clicked="btnCancel_Clicked" 
+        Text="AC"  Grid.Row="1"  Grid.Column="0" TextColor="{AppThemeBinding Light='Black', Dark='White'}"  BackgroundColor="{AppThemeBinding Light='#40a5af', Dark='#5cb1f4'}"
+            />
+        <Button x:Name="btnC" Clicked="btnCancel_Clicked" 
+    Text="C" Grid.Row="1" Grid.Column="1" TextColor="{AppThemeBinding Light='Black', Dark='White'}"  BackgroundColor="{AppThemeBinding Light='#40a5af', Dark='#5cb1f4'}"
+    />
+        <Button x:Name="btnClr" Clicked="btnCancel_Clicked" 
+    Text="Clr" Grid.Row="1" Grid.Column="2" TextColor="{AppThemeBinding Light='Black', Dark='White'}"  BackgroundColor="{AppThemeBinding Light='#40a5af', Dark='#5cb1f4'}"
+    />
+        <Button Clicked="calc_Clicked"  
+    Text="÷" Grid.Row="1" Grid.Column="3" TextColor="{AppThemeBinding Light='Black', Dark='White'}"  BackgroundColor="{AppThemeBinding Light='#40a5af', Dark='#5cb1f4'}"
+    />
+
+
+        <Button
+    Text="7"  Clicked="calc_Clicked" Grid.Row="2" Grid.Column="0"
+    />
+        <Button
+    Text="8" Clicked="calc_Clicked" Grid.Row="2" Grid.Column="1"
+    />
+        <Button
+    Text="9" Clicked="calc_Clicked" Grid.Row="2" Grid.Column="2"
+    />
+        <Button Clicked="calc_Clicked"  
+    Text="×" Grid.Row="2" Grid.Column="3" TextColor="{AppThemeBinding Light='Black', Dark='White'}"  BackgroundColor="{AppThemeBinding Light='#40a5af', Dark='#5cb1f4'}"
+    />
+
+
+        <Button
+    Text="4"  Clicked="calc_Clicked" Grid.Row="3" Grid.Column="0"
+    />
+        <Button
+    Text="5"  Clicked="calc_Clicked" Grid.Row="3" Grid.Column="1"
+    />
+        <Button
+    Text="6" Clicked="calc_Clicked" Grid.Row="3" Grid.Column="2"
+    />
+        <Button Clicked="calc_Clicked"  
+    Text="-" Grid.Row="3" Grid.Column="3" TextColor="{AppThemeBinding Light='Black', Dark='White'}"  BackgroundColor="{AppThemeBinding Light='#40a5af', Dark='#5cb1f4'}"
+    />
+
+
+        <Button
+    Text="1" Clicked="calc_Clicked" Grid.Row="4" Grid.Column="0"
+    />
+        <Button
+    Text="2"  Clicked="calc_Clicked" Grid.Row="4" Grid.Column="1"
+    />
+        <Button
+    Text="3" Clicked="calc_Clicked" Grid.Row="4" Grid.Column="2"
+    />
+        <Button x:Name="btnSoma" Clicked="calc_Clicked"  
+    Text="+" Grid.Row="4" Grid.Column="3" TextColor="{AppThemeBinding Light='Black', Dark='White'}"  BackgroundColor="{AppThemeBinding Light='#40a5af', Dark='#5cb1f4'}"
+    />
+
+
+        <Button  Clicked="calc_Clicked"
+   Grid.ColumnSpan="2" MaximumWidthRequest="200" Text="0" Grid.Row="5" Grid.Column="0"
+    />
+
+        <Button x:Name="btnDecimal" Clicked="btnDecimal_Clicked"    
+    Text="," Grid.Row="5" Grid.Column="2"  TextColor="{AppThemeBinding Light='Black', Dark='White'}"  BackgroundColor="{AppThemeBinding Light='#c8cde2', Dark='#5cb1f4'}"
+    />
+        <Button x:Name="btnResultado" Clicked="btnIgual_Clicked"
+    Text="=" Grid.Row="5" Grid.Column="3" TextColor="{AppThemeBinding Light='Black', Dark='White'}"  BackgroundColor="{AppThemeBinding Light='#40a5af', Dark='#5cb1f4'}"
+    />
+
+
+
+
+
+
+    </Grid>
+
+</ContentPage>
